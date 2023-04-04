@@ -29,7 +29,7 @@
             {
                 if (toDo.Id == item.Id)
                 {
-                    item.Status = toDo.Status;
+                    item.IsCompleted = toDo.IsCompleted;
                     break;
                 }
             }

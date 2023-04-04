@@ -23,6 +23,7 @@ builder.Services.AddScoped<IValidator<ToDoDataRequest>, ToDoDataRequestValidator
 
 var app = builder.Build();
 
+app.UseCors(opt => opt.WithOrigins("http://localhost:3000").AllowAnyHeader().AllowAnyMethod());
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

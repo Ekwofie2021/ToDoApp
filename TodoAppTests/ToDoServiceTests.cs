@@ -72,22 +72,23 @@ namespace TodoAppTests
     {
       var toDo = _fixture.Build<ToDoDto>()
         .With(x => x.Id, toDoId)
-        .With(x => x.Status, ToDoApp.Action.Pending)
+        .With(x => x.IsCompleted, false)
         .Create();
 
       _toDoRepository.Setup(r => r.GetToDoById(toDoId)).Returns(toDo);
 
-      var toDoUpdate = _fixture.Build<ToDoDto>()
+      var toDoUpdate = _fixture.Build<ToDoDataRequest>()
         .With(x => x.Id, toDoId)
-        .With(x => x.Status, ToDoApp.Action.Completed)
+        .With(x => x.IsCompleted, true)
         .Create();
+
       _toDoRepository.Setup(r => r.UpdateToDoStatus(toDoUpdate));
 
       _toDoService.UpdateToDoStatus(toDoUpdate);
 
       var result = _toDoService.GetToDoById(toDoId);
 
-      result?.Status.Should().NotBe(toDoUpdate.Status);
+      result?.IsCompleted.Should().NotBe(toDoUpdate.IsCompleted);
     }
   }
 }

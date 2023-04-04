@@ -4,7 +4,7 @@
     {
         public Guid Id { get; set; }
         string Description { get; set; }
-        Action Status { get; set; }
+        bool IsCompleted { get; set; }
         string Title { get; set; }
     }
 }

@@ -6,7 +6,7 @@ using ToDoApp.Services;
 namespace ToDoApp.Controllers
 {
   [ApiController]
-  [Route("api/todo")]
+  [Route("api/todos")]
   public class ToDosController : Controller
   {
     private readonly IToDoService _toDoService;
@@ -54,7 +54,7 @@ namespace ToDoApp.Controllers
       var updateTodo = new ToDoDataRequest
       {
         Id = todo.Id,
-        Status = todo.Status,
+        IsCompleted = todo.IsCompleted,
         Description = todo.Description,
         Title = todo.Title
       };
@@ -71,7 +71,7 @@ namespace ToDoApp.Controllers
         return BadRequest(ModelState);
       }
 
-      todo.Status = updateTodo.Status;
+      todo.IsCompleted = updateTodo.IsCompleted;
 
       return NoContent();
     }
