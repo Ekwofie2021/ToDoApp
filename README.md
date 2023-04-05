@@ -18,6 +18,10 @@ your solution?
 
 - Backend:
   Todo tasks object are stored in memory for simplicity 
+  
+- Frontend: 
+  To toggle a todo task from pending to complete you will need to click on the icon understand the Action column  
+  
 
 • Briefly explain your technical design and why do you think is the best
 approach to this problem.
