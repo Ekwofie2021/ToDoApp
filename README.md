@@ -24,7 +24,7 @@ approach to this problem.
 
 - Backend:    
   I followed SOLID principle for the implementation which result in loose coupling and high cohesion.
-  For the API's I microservices approach with RestFul.
+  For the API's I followed microservices approach with RestFul.
   I use fluent validation to value todo object.
   When the API's were completed I use swagger and post-man to test them.
 
