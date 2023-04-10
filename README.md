@@ -36,5 +36,4 @@ approach to this problem.
   React app is use to create the FE Todo app, 
   I used React Redux toolkit query instead of vanilla react redux to handle the data follow of the.
 
-  I should I have improve the frontend validation to displace the error coming back from the backend to the user
-  and added test
+  I should have tested the frontend code
