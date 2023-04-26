@@ -1,7 +1,6 @@
 
 using AutoFixture;
 using Moq;
-using ToDoApp;
 using ToDoApp.Models;
 using ToDoApp.Repository;
 using ToDoApp.Services;

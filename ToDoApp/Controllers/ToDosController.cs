@@ -31,7 +31,7 @@ namespace ToDoApp.Controllers
         return NotFound();
       }
 
-      return Ok(_toDoService.GetToDoById(id));
+      return Ok(result);
     }
 
     [HttpPost]
@@ -71,7 +71,7 @@ namespace ToDoApp.Controllers
         return BadRequest(ModelState);
       }
 
-      todo.IsCompleted = updateTodo.IsCompleted;
+      _toDoService.UpdateToDoStatus(updateTodo);
 
       return NoContent();
     }

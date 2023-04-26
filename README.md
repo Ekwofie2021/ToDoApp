@@ -12,6 +12,7 @@
   On line: 7 in ToDoAppUI\src\features\store.tsx, you need to update the backend url with baseQuery "https://localhost:7049/api/". 
   Ideally just change the port number: "https://localhost:{PORT-NUMBER}/api/"
   fetchBaseQuery({baseUrl: "https://localhost:7049/api/"}),
+  To start the App: yarn start
 
 • What technical and functional assumptions did you make when implementing
 your solution?
@@ -29,7 +30,7 @@ approach to this problem.
   When the API's were completed I use swagger and post-man to test them.
 
 - Frontend
-  React app is use to create the FE Todo app, 
+  React & typescript app is use to create the FE Todo app, 
   I used React Redux toolkit query instead of vanilla react redux to handle the data follow of the.
 
   I should I have improve the frontend validation to displace the error coming back from the backend to the user
