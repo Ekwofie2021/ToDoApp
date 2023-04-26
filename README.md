@@ -19,13 +19,17 @@ your solution?
 
 - Backend:
   Todo tasks object are stored in memory for simplicity 
+  
+- Frontend: 
+  To toggle a todo task from pending to complete you will need to click on the icon understand the Action column  
+  
 
 • Briefly explain your technical design and why do you think is the best
 approach to this problem.
 
 - Backend:    
   I followed SOLID principle for the implementation which result in loose coupling and high cohesion.
-  For the API's I microservices approach with RestFul.
+  For the API's I followed microservices approach with RestFul.
   I use fluent validation to value todo object.
   When the API's were completed I use swagger and post-man to test them.
 
@@ -33,5 +37,4 @@ approach to this problem.
   React & typescript app is use to create the FE Todo app, 
   I used React Redux toolkit query instead of vanilla react redux to handle the data follow of the.
 
-  I should I have improve the frontend validation to displace the error coming back from the backend to the user
-  and added test
+  I should have tested the frontend code
